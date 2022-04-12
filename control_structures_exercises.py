@@ -127,17 +127,22 @@ for i in range(1,10):
 number = input('Please enter an odd number between 1 and 50: ')
 while True:
 
-    if not number.isdigit():
-        print('That is not a number! Try again.')
+    if (number.isdigit() == False
+        or int(number) > 50
+        or int(number) < 1
+        or int(number) % 2 == 0):
+        print('That is not a valid entry! Try again.')
         number = input('Please enter an odd number between 1 and 50: ')
         continue
         
     else:
         break
-        
-for i in range(1, 50, 2):
-    if i == number:
-        print(f'Yikes! Skipping number: {i}')
-        continue
-    print(f'Here is an odd number: {i}')
 
+number = int(number)   
+for i in range(1, 50):
+    if i % 2 == 0:
+        continue
+    elif i == number:
+        print('Yikes, skipping this number ', i)
+    else:
+        print('Here is an odd number ', i)
