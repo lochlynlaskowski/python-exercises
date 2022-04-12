@@ -73,3 +73,71 @@ while i >= 5:
 number = int(input('Please enter a number: '))
 for i in range(1,11):
     print('{} * {} = {}'.format(number, i, (number * i)))
+
+# Create a for loop that uses print to create the output shown below.
+# 1
+# 22
+# 333
+# 4444
+# 55555
+# 666666
+# 7777777
+# 88888888
+# 999999999
+
+for i in range(1,10):
+    print(str(i) * i)
+    i += 1
+
+# break and continue
+
+# Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue 
+# prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). 
+# Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+
+# Your output should look like this:
+# Number to skip is: 27
+
+# Here is an odd number: 1
+# Here is an odd number: 3
+# Here is an odd number: 5
+# Here is an odd number: 7
+# Here is an odd number: 9
+# Here is an odd number: 11
+# Here is an odd number: 13
+# Here is an odd number: 15
+# Here is an odd number: 17
+# Here is an odd number: 19
+# Here is an odd number: 21
+# Here is an odd number: 23
+# Here is an odd number: 25
+# Yikes! Skipping number: 27
+# Here is an odd number: 29
+# Here is an odd number: 31
+# Here is an odd number: 33
+# Here is an odd number: 35
+# Here is an odd number: 37
+# Here is an odd number: 39
+# Here is an odd number: 41
+# Here is an odd number: 43
+# Here is an odd number: 45
+# Here is an odd number: 47
+# Here is an odd number: 49
+
+number = input('Please enter an odd number between 1 and 50: ')
+while True:
+
+    if not number.isdigit():
+        print('That is not a number! Try again.')
+        number = input('Please enter an odd number between 1 and 50: ')
+        continue
+        
+    else:
+        break
+        
+for i in range(1, 50, 2):
+    if i == number:
+        print(f'Yikes! Skipping number: {i}')
+        continue
+    print(f'Here is an odd number: {i}')
+
