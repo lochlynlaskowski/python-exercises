@@ -146,3 +146,99 @@ for i in range(1, 50):
         print('Yikes, skipping this number ', i)
     else:
         print('Here is an odd number ', i)
+# d) The input function can be used to prompt for input and use that input in your python code. 
+# Prompt the user to enter a positive number and write a loop that counts from 0 to that number. 
+# (Hints: first make sure that the value the user entered is a valid number, also note that the input
+# function returns a string, so you'll need to convert this to a numeric type.)
+
+number = input('Please enter a positive number: ')
+
+while True:
+    if (number.isdigit() ==  False
+        or int(number) < 0):
+        print('Invalid entry! Please try again.')
+        number = input('Please enter a positive number: ')
+    else:
+        break
+
+        
+for n in range(0, int(number) + 1):
+    print(n)
+
+# Write a program that prompts the user for a positive integer. Next write a loop that prints out the 
+# numbers from the number the user entered down to 1.
+
+number = input('Please enter a positive number: ')
+
+while True:
+    if (number.isdigit() ==  False
+        or int(number) < 0):
+        print('Invalid entry! Please try again.')
+        number = input('Please enter a positive number: ')
+    else:
+        break
+
+        
+for n in reversed(range(1, int(number) + 1)):
+    print(n)
+
+# Fizzbuzz
+
+# One of the most common interview questions for entry-level programmers is the FizzBuzz test. 
+# Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
+
+# Write a program that prints the numbers from 1 to 100.
+# For multiples of three print "Fizz" instead of the number
+# For the multiples of five print "Buzz".
+# For numbers which are multiples of both three and five print "FizzBuzz".
+
+for n in range(1,101):
+    if n % 3 == 0 and n % 5 == 0:
+        print('FizzBuzz')
+    elif n % 3 == 0:
+        print('Fizz')
+    elif n % 5 == 0:
+        print('Buzz')
+    else:
+        print(n)
+
+# Display a table of powers.
+
+# Prompt the user to enter an integer. Display a table of squares and cubes from 1 to the value entered.
+# Ask if the user wants to continue. Assume that the user will enter valid data. Only continue if the user agrees to.
+
+number = int(input('Please enter an integer: '))
+print('Here is your table!')
+print('number|squared|cubed')
+print('------|-------|-----')
+
+number = int(number)
+for n in range(1, number + 1):
+    print('{:^6}|{:^7}|{:^5}'.format(n, n ** 2, n ** 3))
+
+# Convert given number grades into letter grades.
+
+# Prompt the user for a numerical grade from 0 to 100. Display the corresponding letter grade.
+# Prompt the user to continue. Assume that the user will enter valid integers for the grades.
+# The application should only continue if the user agrees to.
+# Grade Ranges: A : 100 - 88 B : 87 - 80 C : 79 - 67 D : 66 - 60 F : 59 - 0
+while True:
+    number = int(input('Please enter the grade from 0 to 100: '))
+    
+    if number >= 88:
+        print('A')
+    elif number >= 80:
+        print('B')
+    elif number >= 67:
+        print('C')
+    elif number >= 60:
+        print('D')
+    else:
+        print('F')
+
+
+choice = input('Do you want to continue? ')
+if choice == 'yes' or 'y':
+    continue
+else:
+    break
