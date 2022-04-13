@@ -7,7 +7,7 @@ def is_two(number):
     else: 
         return False
     
-print(is_two('4'))
+
     
     
 # 2. Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise.
@@ -19,7 +19,7 @@ def is_vowel(string):
     else:
         return False
     
-print(is_vowel('f'))
+
 
 # 3. Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. 
 # Use your is_vowel function to accomplish this.
@@ -30,7 +30,7 @@ def is_consonant(string):
     else:
         return True
     
-print(is_consonant('d'))
+
 
 # 4. Define a function that accepts a string that is a word. The function should capitalize the first letter of the word if
 #  the word starts with a consonant.
@@ -41,7 +41,7 @@ def cap_word(word):
     else:
         return word  
     
-print(cap_word('bapple'))
+
 
 # instructor answer
 def capitalize_starting_consonant(string):
@@ -61,7 +61,7 @@ def calculate_tip(x,y):
     tip = y
     total_bill = (x * y) + x
     return(total_bill)
-print(calculate_tip(100, .25))
+
 
 
 # instructor answer
@@ -81,7 +81,7 @@ def apply_discount(x,y):
     discount = y
     new_price = x - (x * y)
     return(new_price)
-print(apply_discount(50, .05))
+
 
 
 # 7. Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input,
@@ -90,7 +90,7 @@ print(apply_discount(50, .05))
 def handle_commas(str):
     return int(str.replace(',',''))
 
-print(handle_commas('3,700,743'))
+
 
 # instructor answer
 def handle_commas(somestring):
@@ -118,7 +118,7 @@ def get_letter_grade(number):
         letter = 'F'
         
     return(letter)
-print(get_letter_grade(73)) 
+
 
 # 9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
 
@@ -131,7 +131,7 @@ def remove_vowels(string):
             output += letter
     return output
 
-print(remove_vowels('apple'))
+
 
 # 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
 # anything that is not a valid python identifier should be removed
@@ -152,7 +152,7 @@ def normalize_name(string):
     output = output.strip()
     output = output.replace(' ', '_')
     return output
-print(normalize_name('Lochlyn.$$$ anne Laskowski.!!!    '))
+
 
 # Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of 
 # the numbers in the list.
@@ -166,5 +166,5 @@ def cumulative_sum(numbers):
         output.append(sum_for_now)
     return output
 
-print(cumulative_sum([1,2,5,6,7]))
+
 
